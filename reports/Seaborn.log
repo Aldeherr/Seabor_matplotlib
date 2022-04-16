@@ -1,0 +1,49 @@
+Traceback (most recent call last):
+  File "C:\Users\data_deal\anaconda3\envs\data_courses\lib\site-packages\jupyter_cache\executors\utils.py", line 51, in single_nb_execution
+    executenb(
+  File "C:\Users\data_deal\anaconda3\envs\data_courses\lib\site-packages\nbclient\client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "C:\Users\data_deal\anaconda3\envs\data_courses\lib\site-packages\nbclient\util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "C:\Users\data_deal\anaconda3\envs\data_courses\lib\site-packages\nbclient\util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "C:\Users\data_deal\anaconda3\envs\data_courses\lib\asyncio\base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "C:\Users\data_deal\anaconda3\envs\data_courses\lib\site-packages\nbclient\client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\data_deal\anaconda3\envs\data_courses\lib\site-packages\nbclient\client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\data_deal\anaconda3\envs\data_courses\lib\site-packages\nbclient\client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+#Grafico scatter o en español Grafico de Dispersion
+sns.relplot(data=tips, kind='')
+------------------
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mValueError[0m                                Traceback (most recent call last)
+Input [1;32mIn [20][0m, in [0;36m<cell line: 2>[1;34m()[0m
+[0;32m      1[0m [38;5;66;03m#Grafico scatter o en español Grafico de Dispersion[39;00m
+[1;32m----> 2[0m [43msns[49m[38;5;241;43m.[39;49m[43mrelplot[49m[43m([49m[43mdata[49m[38;5;241;43m=[39;49m[43mtips[49m[43m,[49m[43m [49m[43mkind[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43m'[39;49m[43m)[49m
+
+File [1;32m~\anaconda3\envs\data_courses\lib\site-packages\seaborn\_decorators.py:46[0m, in [0;36m_deprecate_positional_args.<locals>.inner_f[1;34m(*args, **kwargs)[0m
+[0;32m     36[0m     warnings[38;5;241m.[39mwarn(
+[0;32m     37[0m         [38;5;124m"[39m[38;5;124mPass the following variable[39m[38;5;132;01m{}[39;00m[38;5;124m as [39m[38;5;132;01m{}[39;00m[38;5;124mkeyword arg[39m[38;5;132;01m{}[39;00m[38;5;124m: [39m[38;5;132;01m{}[39;00m[38;5;124m. [39m[38;5;124m"[39m
+[0;32m     38[0m         [38;5;124m"[39m[38;5;124mFrom version 0.12, the only valid positional argument [39m[38;5;124m"[39m
+[1;32m   (...)[0m
+[0;32m     43[0m         [38;5;167;01mFutureWarning[39;00m
+[0;32m     44[0m     )
+[0;32m     45[0m kwargs[38;5;241m.[39mupdate({k: arg [38;5;28;01mfor[39;00m k, arg [38;5;129;01min[39;00m [38;5;28mzip[39m(sig[38;5;241m.[39mparameters, args)})
+[1;32m---> 46[0m [38;5;28;01mreturn[39;00m f([38;5;241m*[39m[38;5;241m*[39mkwargs)
+
+File [1;32m~\anaconda3\envs\data_courses\lib\site-packages\seaborn\relational.py:935[0m, in [0;36mrelplot[1;34m(x, y, hue, size, style, data, row, col, col_wrap, row_order, col_order, palette, hue_order, hue_norm, sizes, size_order, size_norm, markers, dashes, style_order, legend, kind, height, aspect, facet_kws, units, **kwargs)[0m
+[0;32m    933[0m [38;5;28;01melse[39;00m:
+[0;32m    934[0m     err [38;5;241m=[39m [38;5;124m"[39m[38;5;124mPlot kind [39m[38;5;132;01m{}[39;00m[38;5;124m not recognized[39m[38;5;124m"[39m[38;5;241m.[39mformat(kind)
+[1;32m--> 935[0m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(err)
+[0;32m    937[0m [38;5;66;03m# Check for attempt to plot onto specific axes and warn[39;00m
+[0;32m    938[0m [38;5;28;01mif[39;00m [38;5;124m"[39m[38;5;124max[39m[38;5;124m"[39m [38;5;129;01min[39;00m kwargs:
+
+[1;31mValueError[0m: Plot kind  not recognized
+ValueError: Plot kind  not recognized
+
